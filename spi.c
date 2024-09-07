@@ -81,7 +81,7 @@ int spi_init(int spi_speed,struct gpiod_line **cs,struct gpiod_line **prgrmn){
     int offset_cs = 21; // Replace with your GPIO pin number for CS
     int offset_prgmn = 20; // Replace with your GPIO pin number for CS
     
-    chip = gpiod_chip_open("/dev/gpiochip4"); // Replace 4 with the appropriate chip number
+    chip = gpiod_chip_open("/dev/gpiochip4"); // Replace 4 with the appropriate chip number 4 is for raspberry pi 5 for older raspberry pi put "gpiochip0"
 
     if (!chip) {
         perror("Open chip failed");
