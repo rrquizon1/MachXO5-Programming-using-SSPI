@@ -15,6 +15,11 @@ spi_data.c- contains the data to be programmed
 
 Makefile- compiles the project.
 
+Steps to run the project:
+
+1. Compile by running the makefile
+
+2. Run the executable generated ./rhodz_SPI_XO5
 
 Key points to ensure during the Slave SPI (SSPI) configuration flow:
 
