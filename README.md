@@ -15,6 +15,15 @@ spi_data.c- contains the data to be programmed
 
 Makefile- compiles the project.
 
+
+Key points to ensure during the Slave SPI (SSPI) configuration flow:
+
+1. Confirm that INITN is high before sending the Slave SPI activation key. You can either monitor INITN or add a delay after pulling PROGRAMN low before sending the activation key.
+
+2. Read the status registers before and after sending the bitstream to verify that the DONE bit is programmed correctly and there are no failure in configuration. 
+
+
+
 You can modify g_iDataSize and g_pucDataArray with your bitstream information. 
 With this example, MachXO5-NX Development board default bitstream is used which has 583773 bytes of data.
 ![image](https://github.com/user-attachments/assets/5860d121-3ea6-4213-9e6e-8507a80ef5be)
@@ -30,10 +39,4 @@ Reset Sequence:
 
 Sending bitstream by chunks:
 ![image](https://github.com/user-attachments/assets/5d98ad5b-4240-4521-8e1a-760e691aa5d5)
-
-Key points to ensure during the Slave SPI (SSPI) configuration flow:
-
-1.Confirm that INITN is high before sending the Slave SPI activation key. You can either monitor INITN or add a delay after pulling PROGRAMN low before sending the activation key.
-
-2. Read the status registers before and after sending the bitstream to verify that the DONE bit is programmed correctly and there are no failure in configuration. 
 
